@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="an">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
 
 <style>
     body{
-        background-color: rgb(52, 41, 41);
+        background-color: rgb(24, 20, 20);
     }
 
     h1{
@@ -111,15 +111,112 @@
             transition: background-color 0.3s;
         }
 
-        .tendances{
+        .tendancestitle{
             color: #9c8f8f;
         }
 
         .menu{
             margin-left: 120px;
         }
+        .tendances{
+            margin-left: 180px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 20px;
+            width: 250px;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .card:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .card i {
+            font-size: 30px;
+            color: #ff4c4c;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #cccccc;
+        }
+
+        .faq-container {
+            width: 60%;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.126);
+            border-radius: 8px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: 0.3s;
+            color: white;
+        }
+
+        .faq-question:hover {
+            background: rgba(255, 255, 255, 0.417);
+        }
+
+        .faq-answer {
+            padding: 15px;
+            display: none;
+            font-size: 16px;
+            color: #cccccc;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .icon {
+            font-size: 24px;
+            transition: 0.3s;
+        }
+
+        .active .faq-answer {
+            display: block;
+        }
+
+        .active .icon {
+            transform: rotate(45deg);
+        }
+
+        .fin{
+            text-align: center;
+            color: white;
+            margin-top: 30px;
+        }
 
 </style>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 <body>
     <img class="menu" src="Film1.jpg" alt="1"><img class="menu" src="Film 2.jpg" alt="2"><img class="menu" src="Film 3.jpg" alt="3"><img class="menu" src="Film 4.jpg" alt="4"><img class="menu" src="Film 5.jpg" alt="5">
@@ -128,6 +225,102 @@
     <h3 class="subtitle">Prêt à regarder Netflix ? Saisissez votre adresse e-mail pour vous abonner ou réactiver votre abonnement.</h3>
     <input class="email" type="email" placeholder="Adresse e-mail">
     <button class="Conexion">Commencer</button>
-    <h1 class="tendances">Tendances actuelles</h1>
+    <h1 class="tendancestitle">Tendances actuelles</h1>
+    <img class="tendances" src="download.jpg" alt="d1"><img class="tendances" src="download-1.jpg" alt="d1"><img class="tendances" src="download-2.jpg" alt="d1"><img class="tendances" src="download-3.jpg" alt="d3">
+    <h2>Ecore plus de raisons de vous abonnez</h2>
+
+
+    <div class="container">
+        <div class="card">
+            <i class="fas fa-tv"></i>
+            <h3>Regardez Netflix sur votre TV</h3>
+            <p>Regardez Netflix sur Smart TV, PlayStation, Xbox, Chromecast, Apple TV, etc.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-download"></i>
+            <h3>Téléchargez vos séries</h3>
+            <p>Enregistrez vos programmes préférés et regardez-les hors connexion.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-globe"></i>
+            <h3>Où que vous soyez</h3>
+            <p>Regardez des films et séries en accès illimité sur tous vos écrans.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-child"></i>
+            <h3>Profils enfants</h3>
+            <p>Les enfants découvrent un espace sûr avec leurs personnages préférés.</p>
+        </div>
+
+
+    </div>  
+    <h2 class="questions">Foire au questions</h2>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Qu'est-ce que Netflix ?</span>
+                <span class="icon">+</span>
+            </div>
+            <div class="faq-answer">Netflix est une plateforme de streaming qui propose une large variété de séries, films et documentaires.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Combien coûte Netflix ?</span>
+                <span class="icon">+</span>
+            </div>
+            <div class="faq-answer">Les prix varient selon l’abonnement choisi, allant de l’offre de base à l’offre premium.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Où puis-je regarder Netflix ?</span>
+                <span class="icon">+</span>
+            </div>
+            <div class="faq-answer">Vous pouvez regarder Netflix sur votre TV, smartphone, tablette ou ordinateur.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Comment puis-je annuler mon abonnement ?</span>
+                <span class="icon">+</span>
+            </div>
+            <div class="faq-answer">Vous pouvez annuler votre abonnement à tout moment dans les paramètres de votre compte.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Netflix est-il adapté aux enfants ?</span>
+                <span class="icon">+</span>
+            </div>
+            <div class="faq-answer">Oui, Netflix propose un mode "Enfants" avec des contenus adaptés et des contrôles parentaux.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Comment puis-je télécharger des séries ?</span>
+                <span class="icon">+</span>
+            </div>
+            <div class="faq-answer">Vous pouvez télécharger du contenu sur votre appareil mobile pour le regarder hors connexion.</div>
+        </div>
+    </div>
+
+
+    <div>
+        <p class="fin">Prêt à regarder Netflix ? Saisissez votre adresse e-mail pour vous abonnez ou</p>
+        <p class="fin">réactiver votre abonnement.</p>
+        <input class="email" type="email" placeholder="Adresse e-mail">
+        <button class="Conexion">Commencer</button>
+    </div>
+
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
